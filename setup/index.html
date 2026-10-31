@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive"><meta name="description" content="DSH 远程：非官方、自托管的鸿蒙客户端支持与隐私说明。">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<title>连接自己的主机 · DSH 远程</title><link rel="icon" href="/dsh-remote-support/assets/icon.svg" type="image/svg+xml"><link rel="stylesheet" href="/dsh-remote-support/assets/site.css"></head>
+<body><a class="skip" href="#main">跳到正文</a><header class="site-header"><div class="header-inner"><a class="brand" href="/dsh-remote-support/"><img src="/dsh-remote-support/assets/icon.svg" width="40" height="40" alt=""><span>DSH 远程<small>非官方 · 自托管</small></span></a><nav aria-label="主导航"><a href="/dsh-remote-support/">首页</a><a href="/dsh-remote-support/setup/" aria-current="page">连接指南</a><a href="/dsh-remote-support/privacy/">隐私政策</a><a href="/dsh-remote-support/terms/">使用条款</a><a href="/dsh-remote-support/licenses/">第三方说明</a></nav></div></header>
+<main id="main"><article class="document"><p class="eyebrow">自托管连接指南</p><h1>连接自己的主机</h1><h2>DSH 鸿蒙自托管宿主组合 2.2.0</h2>
+<p>这是提供给已有自己 DeepSeek Harness 的用户的宿主插件组合。仅验证以下固定版本：Node <code>^22.19.0 || &gt;=24.0.0</code>、DSH <code>0.2.1-rc.2</code>、<code>@linxin666/dsh-remote-web-ui 0.4.7</code>、<code>dsh-mobile-bridge 0.2.11</code>。不宣称兼容更新的 DSH，也不提供共享电脑、模型账号或模型额度。</p>
+<p>这个压缩包当前是待发行 staging；没有发布 npm、修改公共域名或启动生产服务。发行方需在公开下载页面提供本压缩包及 manifest 的 SHA256，用户应先从可信下载页核对哈希，再执行包内脚本。内部 manifest 是完整性清单，不是发行方数字签名。</p>
+<h3>1. 准备</h3>
+<ul>
+<li>已有并确认 <code>dsh --version</code> 为 <code>0.2.1-rc.2</code>。缺少该版本时，官方 npm 包名为 <code>@deepseek-ai/dsh</code>，精确版本安装语法是 <code>npm install --global @deepseek-ai/dsh@0.2.1-rc.2</code>；用户自行决定是否安装或保留独立版本，脚本不会升级现有 DSH。</li>
+<li><code>node --version</code> 符合上述范围，<code>pnpm --version</code> 可运行。DSH 的 plugin 命令实际转发给 pnpm，pnpm 是必需项。</li>
+<li>记录自己要使用的 DSH home 和 profile。建议先使用一个独立 DSH home 的 <code>web</code> profile 完成验证，再按自己的停机计划修改常用实例；不要把新安装直接当成生产升级。</li>
+<li>准备自己的固定 HTTPS 域名与反向代理或 named Tunnel，指向电脑的 loopback DSH Web 端口。手机支持 DNS HTTPS 默认443端口，不使用 HTTP、IP地址或任意路径作为 origin。电脑需要保持在线。</li>
+</ul>
+<h3>2. 安装插件</h3>
+<p>解压后在该目录执行，路径换成自己的实际绝对路径：</p>
+<pre><code>node host.mjs install --home /absolute/path/to/your-dsh-home --profile web</code></pre>
+<p>Windows 可使用 <code>D:/your-private/dsh-home</code>。如果 <code>dsh</code> 不在 PATH，可传 <code>--dsh /absolute/path/to/dsh</code>；也支持传已安装 CLI 的 <code>lib/bin.js</code>。脚本先拒绝不匹配的 DSH 版本、损坏的 tgz 或不符的 manifest，然后调用真实的 <code>dsh plugin --profile web add --ignore-scripts --save-exact ...</code>。不写已有 <code>cordis.patch.yml</code>，不启动或重启 DSH，不执行包安装脚本。</p>
+<p>安装会从 npm 官方 registry 拉取插件依赖，插件本体为本包内的固定 tgz。依赖由目标 profile 的 pnpm lockfile 管理；脚本不会拿发行方的 lockfile 覆盖用户已有插件。由于跳过安装脚本，不使用插件自动下载 cloudflared 的能力。</p>
+<h3>3. 生成独立配置</h3>
+<pre><code>node host.mjs configure --origin https://dsh.example.com --out /private/path/phone-host.cordis.yml</code></pre>
+<p>输出必须是新的绝对路径，已存在则拒绝覆盖。生成物只有公共域名和能力配置，不包含凭据。配置关闭自动 Tunnel、第三方稳定域名 relay 及 Codex 接入；保持 DSH 设备配对门，预览目录保持未授权状态。代码没有关闭电脑原有的 DSH 身份验证。</p>
+<p>使用相同 DSH home 启动用户自己的实例；下面的3080可换为空闲端口：</p>
+<pre><code>DSH_HOME=/absolute/path/to/your-dsh-home dsh web --patch /private/path/phone-host.cordis.yml --host 127.0.0.1 --port 3080 --no-open</code></pre>
+<p>反向代理或用户自己的 named Tunnel 应指向这个 loopback 端口，并保留正确的原始 Host/转发 authority。不要用 <code>--trusted-host</code> 把公网入口加入原始 <code>/api</code> 信任围栏，也不要直接开放未认证的管理接口。本组合不配置 DNS、证书、路由器入站端口或 Cloudflare 账号。</p>
+<h3>4. 配对手机</h3>
+<ol>
+<li>在电脑本地打开 DSH Web，进入“远程访问”，生成短时邀请链接。应显示刚配置的 HTTPS 域名；若仍是 LAN 地址，先检查本次启动是否使用了正确配置，不要把别的机器邀请改写成当前域名。</li>
+<li>鸿蒙 App → 添加机器 → 填写连接：输入自选名称、同一 HTTPS origin，以及电脑生成的 <code>/pair-accept?pair=…</code> 链接。</li>
+<li>普通 HTTPS 入口关闭 Access 开关；只有自己的入口确实使用 Cloudflare Access 时，才填这台手机专用的 Service Token Client ID/Secret。管理 API Token、Tunnel Token 留在电脑，不能导入手机。</li>
+<li>先解析预览并核对域名，再确认连接。有效期由电脑控制，配置期限不会延长邀请寿命。过期时回到电脑重新生成，刷新邀请后旧链接会失效。remote-web-ui 0.4.7 的同一链接在有效期内可重复登记设备，请勿把它分享给其他人；它不等于严格单次消费的邀请码。</li>
+<li>成功后在会话页选择自己的电脑。第一次实际发送任务会使用用户自己配置的模型，并可能计费；本组合的安装与 doctor 不提交模型任务。</li>
+</ol>
+<h3>5. 只读 doctor</h3>
+<pre><code>node host.mjs doctor --origin https://dsh.example.com</code></pre>
+<p>无设备身份时预期 <code>unpairedGate:true</code>：证明已到配对门，不代表手机连通。若返回跳转/401，先修入口访问策略。若匿名成功读取手机 API，doctor 直接失败，应先停止公开该入口。</p>
+<p>仅当用户有自己专用的诊断设备凭据时，可写入本机私有文本文件（Unix <code>chmod 600</code>），内容为 <code>dsh_pair=设备凭据</code>，然后使用 <code>--cookie-file /private/path/device-cookie.txt</code>；Access 服务凭据可通过 <code>--access-file /private/path/device-access.json</code> 提供，文件仅含 <code>clientId</code> 和 <code>clientSecret</code>。不把凭据放在命令行。<code>mobileApiAuthenticated:true</code> 只证明当前手机 API 鉴权，不证明模型调用、手机显示或网络长期稳定。Windows 用户自行限制这些文件的 ACL。</p>
+<h3>当前能力和边界</h3>
+<ul>
+<li>前台会话、待答/审批、历史读取及支持时的 SSE；断流时客户端轮询回退。是否可达还取决于用户自己的 HTTPS 代理和手机网络。</li>
+<li>未包含后台 Push 插件或发行方私钥，不提供公共推送中继。不能把“前台可读”宣传成锁屏送达。</li>
+<li>Workspace preview 默认没有授权目录；需要用户明确设置其允许的项目根。不能复制发行方个人的路径或把整个家目录当默认范围。</li>
+<li>不包含旧版 <code>dsh-secure-remote</code> 安全入口包：它现有固定13项 allowlist 与当前桥接的 SSE、预览及扩展方法不完全一致，尚不能宣称整套兼容。Access 如由用户的 named Tunnel/边缘策略提供，用户需独立验证；本组合不声称源站已做额外 Cloudflare JWT 验签。</li>
+<li>卸载使用原 DSH 的 <code>dsh plugin --profile web remove dsh-mobile-bridge @linxin666/dsh-remote-web-ui</code>，并在下一次启动去掉独立 overlay。先按用户自己的计划停止该实例；不删除 DSH home、已有会话或设备文件。撤销手机需在电脑“远程访问”撤销设备；Access 凭据需另行撤销。</li>
+</ul>
+<p>许可证、来源与分发边界见 <code>THIRD_PARTY_NOTICES.md</code>。源码仓库的私有状态不会因打包改变。</p></article></main><footer class="site-footer"><div><strong>DSH 远程</strong><p>免费首发准备中，尚未宣布正式上架。不提供公共 AI 服务或模型额度。</p></div><div><p>运营者：王毅</p><p>支持与隐私联系：<a href="mailto:ruby1304%40live.com">ruby1304@live.com</a></p></div></footer></body></html>

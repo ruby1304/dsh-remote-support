@@ -1,0 +1,29 @@
+{
+  "schema": "dsh-store-host-download/v1",
+  "included": true,
+  "version": "2.2.0",
+  "artifacts": [
+    {
+      "name": "@linxin666/dsh-remote-web-ui",
+      "version": "0.4.7",
+      "file": "linxin666-dsh-remote-web-ui-0.4.7.tgz",
+      "license": "Apache-2.0",
+      "sha256": "8b56e3cf2e4830e6ea81680a184c33442a99ec66b09158ad759efd05d1560dc0"
+    },
+    {
+      "name": "dsh-mobile-bridge",
+      "version": "0.2.11",
+      "file": "dsh-mobile-bridge-0.2.11.tgz",
+      "license": "SEE LICENSE IN LICENSE.txt",
+      "sha256": "021a3ffbe8d21618015b744c03832a40b153d935503338bbfe263572d56c6cad"
+    }
+  ],
+  "upstreamLicenseIncluded": true,
+  "firstPartyTermsIncluded": true,
+  "licenseReady": true,
+  "licenseStatus": "declared-licenses-and-referenced-terms-present",
+  "sha256": "506f5110b9996af5867cdc24f1c5dcb80823c42e2762ab2dc08e34876c8bad08",
+  "downloadPath": "/dsh-remote-support/downloads/dsh-harmony-host-2.2.0.zip",
+  "downloadReady": true,
+  "appPackageIncluded": false
+}

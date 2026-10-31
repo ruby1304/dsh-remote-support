@@ -1,0 +1,75 @@
+{
+  "schema": "dsh-store-support-site/v1",
+  "basePath": "/dsh-remote-support",
+  "legalIdentityReady": true,
+  "operator": "王毅",
+  "supportEmail": "ruby1304@live.com",
+  "noPlaceholders": true,
+  "placeholders": [],
+  "policyVersion": "2026-11-01.1",
+  "legalSources": {
+    "entry/src/main/ets/model/LegalContent.ets": "367161abf1129d5c4aab5ef712113899ea2b3ce2f6c80a3aed4a4cc09dbf7a97",
+    "entry/src/main/ets/model/AppPrivacyCore.ets": "ea90b0627a7e7ed15d93e5c94206106ec2f8cb92a26c74500a22c13fd2f5aeb7"
+  },
+  "legalSections": {
+    "privacy": "84126f80359be60dad34cb77fdc78948da59114232cdc9a430ee6c9fb3d5905c",
+    "terms": "b7eb53acc3c3e66b245304bcca57596c06e0e1fd38a417ff6f2e74c07e397311",
+    "licenses": "87c49bf233477d538004ac21bbe1252e99082986eeded422c739a786f1b9b2d3"
+  },
+  "setupSource": {
+    "path": "docs/store-host/README.md",
+    "sha256": "2ecb6c5d1c3768bc63f0f5609a09197cbca8227c749a06e10d388688ccf4b898"
+  },
+  "hostPackage": {
+    "included": true,
+    "version": "2.2.0",
+    "artifacts": [
+      {
+        "name": "@linxin666/dsh-remote-web-ui",
+        "version": "0.4.7",
+        "file": "linxin666-dsh-remote-web-ui-0.4.7.tgz",
+        "license": "Apache-2.0",
+        "sha256": "8b56e3cf2e4830e6ea81680a184c33442a99ec66b09158ad759efd05d1560dc0"
+      },
+      {
+        "name": "dsh-mobile-bridge",
+        "version": "0.2.11",
+        "file": "dsh-mobile-bridge-0.2.11.tgz",
+        "license": "SEE LICENSE IN LICENSE.txt",
+        "sha256": "021a3ffbe8d21618015b744c03832a40b153d935503338bbfe263572d56c6cad"
+      }
+    ],
+    "upstreamLicenseIncluded": true,
+    "firstPartyTermsIncluded": true,
+    "licenseReady": true,
+    "licenseStatus": "declared-licenses-and-referenced-terms-present",
+    "sha256": "506f5110b9996af5867cdc24f1c5dcb80823c42e2762ab2dc08e34876c8bad08",
+    "downloadPath": "/dsh-remote-support/downloads/dsh-harmony-host-2.2.0.zip"
+  },
+  "publicReleaseReady": true,
+  "appListingClaim": false,
+  "deviceClaims": {
+    "phone": "pending-experience-validation",
+    "tablet": "pending-experience-validation"
+  },
+  "externalAssets": false,
+  "trackingScripts": false,
+  "appPackageIncluded": false,
+  "deploymentPerformed": false,
+  "publishedUrl": null,
+  "files": {
+    "index.html": "efb8c84c5e076adccee5cb5687f456d51fc54826b424fd2d8976a833bdbb6a81",
+    "privacy/index.html": "520b243d2016da2f990020b55d102b520ec2ca42be4d23679c916f63199329c3",
+    "terms/index.html": "279a0c087c2c777a00c8bd9f1ad5b99a10fd8d62436dc60663aa1665ee8ad395",
+    "licenses/index.html": "87e43ac3ea0932c29a07f4e9e5bf5396b5a2f8f2bc149b02b6d79a0b5575027a",
+    "setup/index.html": "f62636f1d82c921f4b000b9819ec5c5efa188031fe20e85688f3b59404025e2f",
+    "404.html": "7ed9cda3c5938aa042d897fc0034bbaeb453210390b2e9d7f60cc0f3fe41820b",
+    "assets/site.css": "18f739dbf6d58f58b5f72ad26943eed9137560315e8f14c5c9af0304a3ff846d",
+    "assets/icon.svg": "9376d99ddcba65b8662cf114868f69d5e3be7cf38fa93c202c6a7d8607d22c1a",
+    "_headers": "4352e59288224ed507c622ced3078c21b5972db6e96c89740de2111cc45eeda8",
+    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "robots.txt": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1",
+    "downloads/manifest.json": "17d15270ab4c149b8dbeb55bf753cf9b5abb455e2283451e0e9de3db9b73883b",
+    "downloads/dsh-harmony-host-2.2.0.zip": "506f5110b9996af5867cdc24f1c5dcb80823c42e2762ab2dc08e34876c8bad08"
+  }
+}

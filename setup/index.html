@@ -5,7 +5,7 @@
 <title>连接自己的主机 · DSH 远程</title><link rel="icon" href="/dsh-remote-support/assets/icon.svg" type="image/svg+xml"><link rel="stylesheet" href="/dsh-remote-support/assets/site.css"></head>
 <body><a class="skip" href="#main">跳到正文</a><header class="site-header"><div class="header-inner"><a class="brand" href="/dsh-remote-support/"><img src="/dsh-remote-support/assets/icon.svg" width="40" height="40" alt=""><span>DSH 远程<small>非官方 · 自托管</small></span></a><nav aria-label="主导航"><a href="/dsh-remote-support/">首页</a><a href="/dsh-remote-support/setup/" aria-current="page">连接指南</a><a href="/dsh-remote-support/privacy/">隐私政策</a><a href="/dsh-remote-support/terms/">使用条款</a><a href="/dsh-remote-support/licenses/">第三方说明</a></nav></div></header>
 <main id="main"><article class="document"><p class="eyebrow">自托管连接指南</p><h1>连接自己的主机</h1><h2>DSH 鸿蒙自托管宿主组合 2.2.0</h2>
-<p>这是提供给已有自己 DeepSeek Harness 的用户的宿主插件组合。仅验证以下固定版本：Node <code>^22.19.0 || &gt;=24.0.0</code>、DSH <code>0.2.1-rc.2</code>、<code>@linxin666/dsh-remote-web-ui 0.4.7</code>、<code>dsh-mobile-bridge 0.2.11</code>。不宣称兼容更新的 DSH，也不提供共享电脑、模型账号或模型额度。</p>
+<p>这是提供给已有自己 DeepSeek Harness 的用户的宿主插件组合。要求 Node <code>^22.19.0 || &gt;=24.0.0</code>，组件固定为 DSH <code>0.2.1-rc.2</code>、<code>@linxin666/dsh-remote-web-ui 0.4.7</code> 和 <code>dsh-mobile-bridge 0.2.11</code>。本轮实际验证环境为 macOS、Node 22.22.3；其他宿主系统和 Node 版本尚未实测。不宣称兼容更新的 DSH，也不提供共享电脑、模型账号或模型额度。ZIP 包含两个宿主插件，不包含 DSH CLI；CLI 需按下文准备。</p>
 <p>这是 2.2.0 公开候选版配套宿主；App 的正式上架状态请以应用市场为准。请先在公开下载页面核对压缩包的 SHA256，再执行包内脚本。安装工具不会替你修改公共域名或启动生产服务，也不依赖访问 App 私有源码仓。内部 manifest 是完整性清单，不是发行方数字签名。</p>
 <h3>1. 准备</h3>
 <ul>

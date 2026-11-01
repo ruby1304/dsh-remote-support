@@ -6,19 +6,19 @@
   "supportEmail": "ruby1304@live.com",
   "noPlaceholders": true,
   "placeholders": [],
-  "policyVersion": "2026-11-01.1",
+  "policyVersion": "2026-11-01.2",
   "legalSources": {
-    "entry/src/main/ets/model/LegalContent.ets": "367161abf1129d5c4aab5ef712113899ea2b3ce2f6c80a3aed4a4cc09dbf7a97",
-    "entry/src/main/ets/model/AppPrivacyCore.ets": "ea90b0627a7e7ed15d93e5c94206106ec2f8cb92a26c74500a22c13fd2f5aeb7"
+    "entry/src/main/ets/model/LegalContent.ets": "8644bb22f183a2d80c8110db2fdde9d11b1f3dc04db5327c46350b285670c096",
+    "entry/src/main/ets/model/AppPrivacyCore.ets": "b80494c34d1835e8d5eedcf66bea6e9e625db2de38617a47c1459dd2ab4c50a6"
   },
   "legalSections": {
-    "privacy": "84126f80359be60dad34cb77fdc78948da59114232cdc9a430ee6c9fb3d5905c",
-    "terms": "b7eb53acc3c3e66b245304bcca57596c06e0e1fd38a417ff6f2e74c07e397311",
+    "privacy": "e807b97e211de507074e5f1d8fc6a9b0787c9fbadb8181b356427c67dc2053e2",
+    "terms": "b4a992f48e5454f66888422f7042bbad3b9f3e1a8fbe8375e2bce454aba9c1aa",
     "licenses": "87c49bf233477d538004ac21bbe1252e99082986eeded422c739a786f1b9b2d3"
   },
   "setupSource": {
     "path": "docs/store-host/README.md",
-    "sha256": "4fa94ac5e17f8d3fd090719e060756efa4975b033a3d5bef9b2928d74f002d0b"
+    "sha256": "e844569b57a022fc07078b97780369202552cfce9f633884aec1dcbe16c792d5"
   },
   "hostPackage": {
     "included": true,
@@ -33,17 +33,24 @@
       },
       {
         "name": "dsh-mobile-bridge",
-        "version": "0.2.11",
-        "file": "dsh-mobile-bridge-0.2.11.tgz",
+        "version": "0.2.12",
+        "file": "dsh-mobile-bridge-0.2.12.tgz",
         "license": "SEE LICENSE IN LICENSE.txt",
-        "sha256": "021a3ffbe8d21618015b744c03832a40b153d935503338bbfe263572d56c6cad"
+        "sha256": "4f26ae75ea7dc861fd1a0197fa5aea3f066107a9e7127a0258a3277708ab1405"
+      },
+      {
+        "name": "dsh-host-control",
+        "version": "0.1.0",
+        "file": "dsh-host-control-0.1.0.tgz",
+        "license": "SEE LICENSE IN LICENSE.txt",
+        "sha256": "e9a9c3db07d75fa24b6a429e940a1eea08ac565f53af38d6905f7810252a7f7c"
       }
     ],
     "upstreamLicenseIncluded": true,
     "firstPartyTermsIncluded": true,
     "licenseReady": true,
     "licenseStatus": "declared-licenses-and-referenced-terms-present",
-    "sha256": "7e5c50ddd36558d0264d91837747f879f46ca01d8289a54269ef767854a3ee96",
+    "sha256": "7b1a6675690123216a897062d223c93cac74d4fcdfe03939ea943d76c22599bb",
     "downloadPath": "/dsh-remote-support/downloads/dsh-harmony-host-2.2.0.zip"
   },
   "publicReleaseReady": true,
@@ -58,18 +65,18 @@
   "deploymentPerformed": false,
   "publishedUrl": null,
   "files": {
-    "index.html": "bc249029e860a40d43ddd883378f3158d66b44a7d97f3f79dd90aac134a04888",
-    "privacy/index.html": "520b243d2016da2f990020b55d102b520ec2ca42be4d23679c916f63199329c3",
-    "terms/index.html": "279a0c087c2c777a00c8bd9f1ad5b99a10fd8d62436dc60663aa1665ee8ad395",
-    "licenses/index.html": "87e43ac3ea0932c29a07f4e9e5bf5396b5a2f8f2bc149b02b6d79a0b5575027a",
-    "setup/index.html": "05352701fe2eecbfaa80cd852919ab522fd0ab947413ad06dc9005fc0b027a5a",
+    "index.html": "6e6c4d919db74e3d621d865b3b125b35d525daf2bb71e064e635506e7f04bdce",
+    "privacy/index.html": "5970a9f5912c8690df961b583b2f827a97a42f5c0ea6fab754f4bb54ed94ec59",
+    "terms/index.html": "878849d1ebef930b3cda92a2932d78cf513ee98a17371b838bf8cb7e05dfd602",
+    "licenses/index.html": "645a5912eb84c43346775b7797daf4e4d8f65f745cce66da6be6fc54c137b753",
+    "setup/index.html": "ca0d2e0d6797845781db39c5693faaaaa7ee4c62e2f724b9b47a7c644c90099f",
     "404.html": "7ed9cda3c5938aa042d897fc0034bbaeb453210390b2e9d7f60cc0f3fe41820b",
     "assets/site.css": "18f739dbf6d58f58b5f72ad26943eed9137560315e8f14c5c9af0304a3ff846d",
     "assets/icon.svg": "9376d99ddcba65b8662cf114868f69d5e3be7cf38fa93c202c6a7d8607d22c1a",
     "_headers": "4352e59288224ed507c622ced3078c21b5972db6e96c89740de2111cc45eeda8",
     ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "robots.txt": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1",
-    "downloads/manifest.json": "e70d9ca0f451fb95a18c878b3a5511bd2c71d298ccc2d4cb349d0384ae52412c",
-    "downloads/dsh-harmony-host-2.2.0.zip": "7e5c50ddd36558d0264d91837747f879f46ca01d8289a54269ef767854a3ee96"
+    "downloads/manifest.json": "f0febfc330aa9d36c68c6cec8972219a514a2b33774ca3e183f12b49f0600616",
+    "downloads/dsh-harmony-host-2.2.0.zip": "7b1a6675690123216a897062d223c93cac74d4fcdfe03939ea943d76c22599bb"
   }
 }

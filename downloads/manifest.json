@@ -12,17 +12,24 @@
     },
     {
       "name": "dsh-mobile-bridge",
-      "version": "0.2.11",
-      "file": "dsh-mobile-bridge-0.2.11.tgz",
+      "version": "0.2.12",
+      "file": "dsh-mobile-bridge-0.2.12.tgz",
       "license": "SEE LICENSE IN LICENSE.txt",
-      "sha256": "021a3ffbe8d21618015b744c03832a40b153d935503338bbfe263572d56c6cad"
+      "sha256": "4f26ae75ea7dc861fd1a0197fa5aea3f066107a9e7127a0258a3277708ab1405"
+    },
+    {
+      "name": "dsh-host-control",
+      "version": "0.1.0",
+      "file": "dsh-host-control-0.1.0.tgz",
+      "license": "SEE LICENSE IN LICENSE.txt",
+      "sha256": "e9a9c3db07d75fa24b6a429e940a1eea08ac565f53af38d6905f7810252a7f7c"
     }
   ],
   "upstreamLicenseIncluded": true,
   "firstPartyTermsIncluded": true,
   "licenseReady": true,
   "licenseStatus": "declared-licenses-and-referenced-terms-present",
-  "sha256": "7e5c50ddd36558d0264d91837747f879f46ca01d8289a54269ef767854a3ee96",
+  "sha256": "7b1a6675690123216a897062d223c93cac74d4fcdfe03939ea943d76c22599bb",
   "downloadPath": "/dsh-remote-support/downloads/dsh-harmony-host-2.2.0.zip",
   "downloadReady": true,
   "appPackageIncluded": false

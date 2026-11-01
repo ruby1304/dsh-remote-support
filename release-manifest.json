@@ -18,7 +18,7 @@
   },
   "setupSource": {
     "path": "docs/store-host/README.md",
-    "sha256": "2ecb6c5d1c3768bc63f0f5609a09197cbca8227c749a06e10d388688ccf4b898"
+    "sha256": "34c64a428c9990f9dd88a2b1b60fb64845d5f9e5f2c4c8cf286879de1e9f26f8"
   },
   "hostPackage": {
     "included": true,
@@ -43,7 +43,7 @@
     "firstPartyTermsIncluded": true,
     "licenseReady": true,
     "licenseStatus": "declared-licenses-and-referenced-terms-present",
-    "sha256": "506f5110b9996af5867cdc24f1c5dcb80823c42e2762ab2dc08e34876c8bad08",
+    "sha256": "8d491205fa5b45e9662cc8d261f52d51d5c0dcdebc6b92d58305f114bd6758da",
     "downloadPath": "/dsh-remote-support/downloads/dsh-harmony-host-2.2.0.zip"
   },
   "publicReleaseReady": true,
@@ -58,18 +58,18 @@
   "deploymentPerformed": false,
   "publishedUrl": null,
   "files": {
-    "index.html": "efb8c84c5e076adccee5cb5687f456d51fc54826b424fd2d8976a833bdbb6a81",
+    "index.html": "8b7e34ef1f1f3f888ca174be758a1de34d09415caee4039137a5ad82b23ad8cb",
     "privacy/index.html": "520b243d2016da2f990020b55d102b520ec2ca42be4d23679c916f63199329c3",
     "terms/index.html": "279a0c087c2c777a00c8bd9f1ad5b99a10fd8d62436dc60663aa1665ee8ad395",
     "licenses/index.html": "87e43ac3ea0932c29a07f4e9e5bf5396b5a2f8f2bc149b02b6d79a0b5575027a",
-    "setup/index.html": "f62636f1d82c921f4b000b9819ec5c5efa188031fe20e85688f3b59404025e2f",
+    "setup/index.html": "ba9b63cf674e44816de00fbff5c142197081089e24eb3bcb776cb844c1fc414e",
     "404.html": "7ed9cda3c5938aa042d897fc0034bbaeb453210390b2e9d7f60cc0f3fe41820b",
     "assets/site.css": "18f739dbf6d58f58b5f72ad26943eed9137560315e8f14c5c9af0304a3ff846d",
     "assets/icon.svg": "9376d99ddcba65b8662cf114868f69d5e3be7cf38fa93c202c6a7d8607d22c1a",
     "_headers": "4352e59288224ed507c622ced3078c21b5972db6e96c89740de2111cc45eeda8",
     ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "robots.txt": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1",
-    "downloads/manifest.json": "17d15270ab4c149b8dbeb55bf753cf9b5abb455e2283451e0e9de3db9b73883b",
-    "downloads/dsh-harmony-host-2.2.0.zip": "506f5110b9996af5867cdc24f1c5dcb80823c42e2762ab2dc08e34876c8bad08"
+    "downloads/manifest.json": "48a43763e5ac36046fd8d407801b46d2715fb71d4da6378bc9722b142e851a23",
+    "downloads/dsh-harmony-host-2.2.0.zip": "8d491205fa5b45e9662cc8d261f52d51d5c0dcdebc6b92d58305f114bd6758da"
   }
 }

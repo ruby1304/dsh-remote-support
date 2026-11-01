@@ -8,12 +8,12 @@
   "placeholders": [],
   "policyVersion": "2026-11-01.2",
   "legalSources": {
-    "entry/src/main/ets/model/LegalContent.ets": "8644bb22f183a2d80c8110db2fdde9d11b1f3dc04db5327c46350b285670c096",
+    "entry/src/main/ets/model/LegalContent.ets": "40e6280d3e37e5d90703a24bbfff8a91fc2c711b7e73021f0ed33698819dc68d",
     "entry/src/main/ets/model/AppPrivacyCore.ets": "b80494c34d1835e8d5eedcf66bea6e9e625db2de38617a47c1459dd2ab4c50a6"
   },
   "legalSections": {
     "privacy": "e807b97e211de507074e5f1d8fc6a9b0787c9fbadb8181b356427c67dc2053e2",
-    "terms": "b4a992f48e5454f66888422f7042bbad3b9f3e1a8fbe8375e2bce454aba9c1aa",
+    "terms": "b4465b74138433bd41e63fac6002ae48c1b676c6248021d6100f7793823a6ec4",
     "licenses": "87c49bf233477d538004ac21bbe1252e99082986eeded422c739a786f1b9b2d3"
   },
   "setupSource": {
@@ -67,7 +67,7 @@
   "files": {
     "index.html": "6e6c4d919db74e3d621d865b3b125b35d525daf2bb71e064e635506e7f04bdce",
     "privacy/index.html": "5970a9f5912c8690df961b583b2f827a97a42f5c0ea6fab754f4bb54ed94ec59",
-    "terms/index.html": "878849d1ebef930b3cda92a2932d78cf513ee98a17371b838bf8cb7e05dfd602",
+    "terms/index.html": "c2fbf6de44dc0fb1ff4be1f575920bebcac732f658ebf390ab7cb643464ec7ec",
     "licenses/index.html": "645a5912eb84c43346775b7797daf4e4d8f65f745cce66da6be6fc54c137b753",
     "setup/index.html": "ca0d2e0d6797845781db39c5693faaaaa7ee4c62e2f724b9b47a7c644c90099f",
     "404.html": "7ed9cda3c5938aa042d897fc0034bbaeb453210390b2e9d7f60cc0f3fe41820b",
